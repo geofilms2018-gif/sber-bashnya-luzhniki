@@ -11,33 +11,89 @@ h1{font:600 clamp(22px,3vw,34px)/1.15 "SB Sans Display",system-ui,sans-serif;mar
 p.sub{color:var(--mut);margin:0 0 28px}
 section{margin:0 0 40px;padding-top:18px;border-top:1px solid var(--line)}
 h2{font:600 19px/1.2 "SB Sans Display",system-ui,sans-serif;margin:0 0 4px}
-h2 span{color:var(--acc)}
+h2 span{color:var(--acc)} h3{font:600 15px/1.2 "SB Sans Display",system-ui,sans-serif;margin:16px 0 6px;color:var(--mut)}
 .meta{color:var(--mut);font-size:14px;margin:0 0 12px}
-.wrap{overflow-x:auto;background:#000;border:1px solid var(--line);border-radius:6px}
+.wrap{overflow-x:auto;background:#000;border:1px solid var(--line);border-radius:6px;margin-bottom:10px}
 .wide{display:block;width:100%;min-width:1100px;height:auto;aspect-ratio:2416/162;background:#000}
-.row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
-.tower{width:min(100%,360px);aspect-ratio:532/880;background:#000;border:1px solid var(--line);border-radius:6px;display:block}
-.street{flex:1 1 560px;min-width:0;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:6px;display:block;width:100%}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.tcol{width:min(100%,250px)} .tcol p{margin:4px 0 0;color:var(--mut);font-size:13px}
+.tower{width:100%;aspect-ratio:532/880;background:#000;border:1px solid var(--line);border-radius:6px;display:block}
+.street{flex:1 1 520px;min-width:0;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:6px;display:block;width:100%}
 details{margin-top:12px}summary{cursor:pointer;color:var(--mut);font-size:14px}
 details img{width:100%;height:auto;display:block;margin-top:8px;border-radius:4px}
+.tbl{overflow-x:auto} table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left} th{color:var(--mut);font-weight:400}
+td.st{font-size:17px;text-align:center} img.kw{width:420px;max-width:42vw;height:auto;display:block} img.tw{width:72px;height:auto;display:block}
+.score{font:600 22px "SB Sans Display",system-ui,sans-serif;color:var(--acc)}
 </style></head><body><main>
 <h1>Умное кольцо · Башня Останкино и крыша «Лужники»</h1>
-<p class="sub">Черновики по сценарию 26.11. Видео закольцованы, без звука.</p>
+<p class="sub">Версия 2, по Креативному ТЗ Лео 26.11 и созвону. Видео закольцованы, без звука.</p>
 
 <section>
-<h2>Башня Останкино <span>· 30 с</span></h2>
-<p class="meta">Файл 532×880: верх 432×450, низ 532×430, края стыкуются. Зелёный на чёрном, белые точки фона. 0 с шум → кольцо и график → график с 3 с → облёт кольца 1–7 с → малое кольцо 7–14 с → 14 с падение на график → 18 с «Мы обязательно выспимся» → 20 с «СБЕР Умное кольцо» → 29 с шум.</p>
+<h2>Башня Останкино <span>· 30 с · 3 версии по ТТ</span></h2>
+<p class="meta">Файл 532×880: верх 432×450, низ 532×430. Зелёный на чёрном, белые точки фона. 0 с шум → кольцо и график → график с 3 с → облёт кольца 1–7 с → малое 7–14 с → 14 с падение на график → 18 с «Мы обязательно выспимся» → 20 с «СБЕР Умное кольцо» → с 29 с шум.</p>
 <div class="row">
-<video class="tower" src="v/bashnya_fayl.mp4" autoplay muted loop playsinline controls></video>
+<div class="tcol"><video class="tower" src="v/bashnya_1.mp4" autoplay muted loop playsinline controls></video><p>1 · как есть</p></div>
+<div class="tcol"><video class="tower" src="v/bashnya_2.mp4" muted loop playsinline controls preload="metadata"></video><p>2 · нарастание яркости с нуля, 5 с</p></div>
+<div class="tcol"><video class="tower" src="v/bashnya_3.mp4" muted loop playsinline controls preload="metadata"></video><p>3 · спад яркости до нуля, 5 с</p></div>
 <video class="street" src="v/bashnya_ulica.mp4" autoplay muted loop playsinline controls></video>
 </div>
-<details><summary>Лист кадров (каждые 0,5 с)</summary><img src="v/bashnya_list.jpg" alt="Кадры Башни каждые 0,5 секунды" loading="lazy"></details>
+<details><summary>Лист кадров (каждые 0,5 с)</summary><img src="v/bashnya_list.jpg" alt="Кадры Башни" loading="lazy"></details>
 </section>
 
 <section>
-<h2>Крыша «Лужники» <span>· 20 с</span></h2>
-<p class="meta">2416×162, 25 к/с. Лента едет справа налево, один оборот за 20 с, края стыкуются. Шум → графики приложения → внутренняя сторона кольца на все 360° → «Мы обязательно выспимся вместе с умным кольцом Сбер» → шум.</p>
-<div class="wrap"><video class="wide" src="v/krysha.mp4" autoplay muted loop playsinline controls></video></div>
-<details><summary>Лист кадров (каждые 0,5 с)</summary><img src="v/krysha_list.jpg" alt="Кадры крыши каждые 0,5 секунды" loading="lazy"></details>
+<h2>Крыша «Лужники» <span>· 20 с · 2 варианта по ТЗ</span></h2>
+<p class="meta">2416×162, 25 к/с, до 10 Мбит/с. Лента едет справа налево, один оборот за 20 с, края стыкуются. Графики приложения → внутренняя сторона кольца с чипами → кольцо уменьшается до высоты экрана → из-за кольца выезжает «Мы обязательно выспимся вместе с умным кольцом Сбер» → шум.</p>
+<h3>Вариант 1 · чёрный фон</h3>
+<div class="wrap"><video class="wide" src="v/krysha_chernyy.mp4" autoplay muted loop playsinline controls></video></div>
+<h3>Вариант 2 · белый фон</h3>
+<div class="wrap"><video class="wide" src="v/krysha_belyy.mp4" autoplay muted loop playsinline controls></video></div>
+<details><summary>Листы кадров (каждые 0,5 с)</summary><img src="v/krysha_chernyy_list.jpg" alt="Кадры крыши, чёрный" loading="lazy"><img src="v/krysha_belyy_list.jpg" alt="Кадры крыши, белый" loading="lazy"></details>
+</section>
+
+<section>
+<h2>Сверка с ТЗ <span class="score">37/39</span></h2>
+<p class="meta">✓ сделано · ⚠ сделано частично · — не в этой задаче.</p>
+<div class="tbl"><table><tr><th>№</th><th>Блок</th><th>Требование</th><th></th><th>Факт</th><th>Кадр</th></tr>
+<tr><td>1</td><td>Крыша</td><td>ТТ: 2416×162</td><td class="st">✓</td><td>2416×162 (ffprobe)</td><td></td></tr>
+<tr><td>2</td><td>Крыша</td><td>ТТ: MP4 h264, 20–25 fps</td><td class="st">✓</td><td>h264, 25 fps</td><td></td></tr>
+<tr><td>3</td><td>Крыша</td><td>ТТ: битрейт до 10 Мбит/с</td><td class="st">✓</td><td>8,2 / 8,3 Мбит/с</td><td></td></tr>
+<tr><td>4</td><td>Крыша</td><td>ТТ: без звука</td><td class="st">✓</td><td>аудиодорожки нет</td><td></td></tr>
+<tr><td>5</td><td>Крыша</td><td>ТТ: левый и правый край стыкуются бесшовно</td><td class="st">✓</td><td>шов 1,25–1,26 (≈1 = шва нет), стык цикла как соседние кадры</td><td></td></tr>
+<tr><td>6</td><td>Крыша</td><td>ТТ: бегущая строка справа налево, полный проезд 20 с</td><td class="st">✓</td><td>вся лента едет справа налево, 1 оборот за 20 с</td><td><img class="kw" src="v/k/kc_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>7</td><td>Крыша</td><td>ТЗ: максимально ярко и контрастно, чёткие силуэты</td><td class="st">✓</td><td>фон почти чёрный, тёплый белый + зелёный</td><td><img class="kw" src="v/k/kc_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>8</td><td>Крыша</td><td>ТЗ: только крупные надписи, шрифт жирный и широкий</td><td class="st">✓</td><td>SB Sans Display Bold, 2 строки на всю высоту</td><td><img class="kw" src="v/k/kc_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>9</td><td>Крыша</td><td>ТЗ: не ставить текст поверх графики</td><td class="st">✓</td><td>лайн на чистом фоне, графики до него</td><td><img class="kw" src="v/k/kc_12.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>10</td><td>Крыша</td><td>ТЗ: визуал кольца (Figma)</td><td class="st">✓</td><td>корпус, 2 таблетки-сенсора, чип, кромка — из точек</td><td><img class="kw" src="v/k/kc_10.6.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>11</td><td>Крыша</td><td>ТЗ: графика приложения</td><td class="st">✓</td><td>гипнограмма, ночи столбиками, пульс, температура ±</td><td><img class="kw" src="v/k/kc_03.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>12</td><td>Крыша</td><td>ТЗ: вариант 1 — чёрный фон, белый и зелёный</td><td class="st">✓</td><td>Krysha_Luzhniki_v2_1_chernyy</td><td><img class="kw" src="v/k/kc_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>13</td><td>Крыша</td><td>ТЗ: вариант 2 — белый фон, чёрный и зелёный</td><td class="st">✓</td><td>Krysha_Luzhniki_v2_2_belyy (графит + #21A038)</td><td><img class="kw" src="v/k/kw_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>14</td><td>Крыша</td><td>Сценарий 1: биометрия и график, пульс малым участком и жирно</td><td class="st">✓</td><td>0–5 с, пульс — один участок, 3 струны</td><td><img class="kw" src="v/k/kc_03.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>15</td><td>Крыша</td><td>Сценарий 2: кольцо, облёт от большого (видны элементы чипа) до малого в размер экрана</td><td class="st">✓</td><td>5,3–10,8 с: внутренность с чипами → кольцо уменьшается до высоты ленты и крутится</td><td><img class="kw" src="v/k/kc_07.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>16</td><td>Крыша</td><td>Сценарий 3: за кольцом лайн «…вместе с умным кольцом Сбер»</td><td class="st">✓</td><td>лайн выезжает из-за кольца с 10,8 с</td><td><img class="kw" src="v/k/kc_12.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>17</td><td>Крыша</td><td>Созвон: лайн 2–3 раза по кругу</td><td class="st">✓</td><td>2 копии по обхвату</td><td><img class="kw" src="v/k/kc_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>18</td><td>Крыша</td><td>Созвон: «Береги себя» убрать</td><td class="st">✓</td><td>нет</td><td></td></tr>
+<tr><td>19</td><td>Крыша</td><td>ТЗ: адаптация яркости для дня и вечера</td><td class="st">⚠</td><td>дневной — вариант 2 на белом; отдельной дневной версии нет</td><td><img class="kw" src="v/k/kw_15.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>20</td><td>Башня</td><td>ТТ: файл 532×880, верх 432×450 в (0,0), низ 532×430 в (0,450)</td><td class="st">✓</td><td>правые 100 px верха пустые</td><td><img class="tw" src="v/k/b_10.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>21</td><td>Башня</td><td>ТТ: формат avi/mov/mp4</td><td class="st">✓</td><td>mp4 h264</td><td></td></tr>
+<tr><td>22</td><td>Башня</td><td>ТТ: 3 типа ролика — как есть / нарастание яркости с нуля / спад до нуля</td><td class="st">✓</td><td>v2_1, v2_2, v2_3; нарастание и спад по 5 с</td><td></td></tr>
+<tr><td>23</td><td>Башня</td><td>ТТ: бегущее только справа налево</td><td class="st">✓</td><td>2 оборота за 30 с справа налево</td><td></td></tr>
+<tr><td>24</td><td>Башня</td><td>ТТ: видно ~40 % ширины — каждое окно читается</td><td class="st">✓</td><td>надписи по 2 копии шириной в окно: верх 172, низ 212 px</td><td><img class="tw" src="v/k/b_22.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>25</td><td>Башня</td><td>ТТ: края стыкуются</td><td class="st">✓</td><td>шов: верх 1,08, низ 1,09</td><td></td></tr>
+<tr><td>26</td><td>Башня</td><td>ТЗ: вариант 1 — зелёный на чёрном</td><td class="st">✓</td><td>элементы зелёные, фон чёрный с белыми точками</td><td><img class="tw" src="v/k/b_19.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>27</td><td>Башня</td><td>Сценарий 1: 0 с — зелёный шум</td><td class="st">✓</td><td>0–1 с, финал в тот же шум (петля)</td><td><img class="tw" src="v/k/b_00.5.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>28</td><td>Башня</td><td>Сценарий 2: точки собираются в зелёные элементы, фон чёрный с белыми точками; элементы жирнее</td><td class="st">✓</td><td>1–2,6 с</td><td><img class="tw" src="v/k/b_02.6.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>29</td><td>Башня</td><td>Сценарий 3: нижний экран — зелёный график с 3 с, крупнее</td><td class="st">✓</td><td>пульс 7 струн, амплитуда 92 px</td><td><img class="tw" src="v/k/b_03.6.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>30</td><td>Башня</td><td>Сценарий 3: верх — кольцо-продукт с элементами чипа, облёт крупно 1–7 с</td><td class="st">✓</td><td>взгляд внутрь (таблетки, чип) → 3/4 сбоку</td><td><img class="tw" src="v/k/b_05.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>31</td><td>Башня</td><td>Сценарий 3: малое кольцо 7–14 с</td><td class="st">✓</td><td>кольцо уменьшается и крутится</td><td><img class="tw" src="v/k/b_10.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>32</td><td>Башня</td><td>Сценарий 4: 14 с кольцо падает на график, реагирует, отпружинивает</td><td class="st">✓</td><td>падение 14,0 с, удар ~15,2 с, линия пружинит</td><td><img class="tw" src="v/k/b_15.6.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>33</td><td>Башня</td><td>Сценарий 5: 18 с вверху «Мы обязательно выспимся», «выспимся» крупно, 2–3 строки</td><td class="st">✓</td><td>3 строки, читается с 18 с</td><td><img class="tw" src="v/k/b_19.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>34</td><td>Башня</td><td>Сценарий 5: 20 с внизу пэкшот «СБЕР Умное кольцо», крупнее</td><td class="st">✓</td><td>лого + «Умное / кольцо»</td><td><img class="tw" src="v/k/b_22.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>35</td><td>Башня</td><td>Сценарий 6: с 29 с уход в шум</td><td class="st">✓</td><td>с 28,6 с, к 30 с полный шум</td><td><img class="tw" src="v/k/b_29.5.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>36</td><td>Кольцо</td><td>Лео 25.11: кольцо не гладкое внутри, с чипами; чипы правдоподобно</td><td class="st">✓</td><td>чип с контактными площадками между сенсорами</td><td><img class="kw" src="v/k/kc_07.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>37</td><td>Кольцо</td><td>Лео 25.11: «не контур, а две таблеточки»</td><td class="st">✓</td><td>сенсоры — сплошные купола</td><td><img class="tw" src="v/k/b_05.0.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>38</td><td>Кольцо</td><td>Лео 26.11: кольцо полностью из точек, структура просвечивает</td><td class="st">✓</td><td>корпус, прозрачный слой, сенсоры — всё точками</td><td><img class="kw" src="v/k/kc_10.6.jpg" loading="lazy" alt=""></td></tr>
+<tr><td>39</td><td>Октябрь</td><td>Лео 26.11: «люди поменялись — вернуть композицию»</td><td class="st">—</td><td>Октябрь на стопе и заморожен — вопрос Д1 №7</td><td></td></tr>
+</table></div>
 </section>
 </main></body></html>
